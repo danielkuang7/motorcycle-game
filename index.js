@@ -20,10 +20,12 @@ function loop(){
     ctx.fillStyle = "#19f";
     ctx.fillRect(0,0,c.width, c.height);
 
+    ctx.fillStyle = "black";
     ctx.beginPath();
     for(let i = 0; i < c.width; i++)
         ctx.lineTo(i, noise(i));
 
+    ctx.fill();
     requestAnimationFrame(loop);
 }
 
