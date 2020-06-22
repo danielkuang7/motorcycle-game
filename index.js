@@ -17,7 +17,9 @@ var noise = x => {
     return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
 }
 
+var t = 0;
 function loop(){
+    t += 1;
     ctx.fillStyle = "#19f";
     ctx.fillRect(0,0,c.width, c.height);
 
@@ -25,7 +27,7 @@ function loop(){
     ctx.beginPath();
     ctx.moveTo(0, c.height);
     for(let i = 0; i < c.width; i++)
-        ctx.lineTo(i, c.height - noise(i) * 0.25);
+        ctx.lineTo(i, c.height - noise(t+i) * 0.25);
 
     ctx.lineTo(c.width, c.height);
     ctx.fill();
