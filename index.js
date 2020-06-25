@@ -22,6 +22,8 @@ var player = new function(){
     this.y = 0;
     this.rot = 0;
 
+    this.img = new Image();
+    this.img.src = "moto.png";
     this.draw = function(){
         ctx.drawImage()
     }
