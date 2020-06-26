@@ -25,7 +25,7 @@ var player = new function(){
     this.img = new Image();
     this.img.src = "moto.png";
     this.draw = function(){
-        ctx.drawImage()
+        ctx.drawImage(this.img, this.x, 100);
     }
 }
 
