@@ -23,7 +23,7 @@ var player = new function(){
     this.rot = 0;
 
     this.img = new Image();
-    this.img.src = "moto.png";
+    this.img.src = "https://i.ebayimg.com/images/g/eVEAAOxypthRt3aV/s-l300.jpg";
     this.draw = function(){
         ctx.drawImage(this.img, this.x, 100);
     }
