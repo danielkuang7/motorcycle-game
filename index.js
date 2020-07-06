@@ -25,9 +25,9 @@ var player = new function(){
     this.img = new Image();
     this.img.src = "https://i.ebayimg.com/images/g/eVEAAOxypthRt3aV/s-l300.jpg";
     this.draw = function(){
+        var p1 = c.height - noise(t + this.x) * 0.25
         ctx.save();
-        ctx.translate(this.x, this.y);
-        ctx.drawImage(this.img, this.x, 100, 30, 30);
+        ctx.drawImage(this.img, 0, 100, 30, 30);
         ctx.restore();
     }
 }
