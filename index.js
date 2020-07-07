@@ -25,7 +25,10 @@ var player = new function(){
     this.img = new Image();
     this.img.src = "https://i.ebayimg.com/images/g/eVEAAOxypthRt3aV/s-l300.jpg";
     this.draw = function(){
-        var p1 = c.height - noise(t + this.x) * 0.25
+        var p1 = c.height - noise(t + this.x) * 0.25;
+        if(p1 > this.y){
+            this.y;
+        }
         ctx.save();
         ctx.drawImage(this.img, 0, 100, 30, 30);
         ctx.restore();
