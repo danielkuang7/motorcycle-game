@@ -30,6 +30,7 @@ var player = new function(){
         if(p1 - 15> this.y){
             this.ySpeed -= 0.1;
         }else{
+            this.y = p1 - 15;
             this.ySpeed = 0;
         }
         this.y -= this.ySpeed;
