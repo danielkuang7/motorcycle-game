@@ -35,14 +35,15 @@ var player = new function(){
         }
         this.y -= this.ySpeed;
         ctx.save();
-        ctx.drawImage(this.img, 0, 100, 30, 30);
+        ctx.translate(this.x, this.y);
+        ctx.drawImage(this.img, -15, -15, 30, 30);
         ctx.restore();
     }
 }
 
 var t = 0;
 function loop(){
-    t += 1;
+    t += 5;
     ctx.fillStyle = "#19f";
     ctx.fillRect(0,0,c.width, c.height);
 
