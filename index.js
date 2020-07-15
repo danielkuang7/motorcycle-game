@@ -27,13 +27,14 @@ var player = new function(){
     this.img.src = "https://i.ebayimg.com/images/g/eVEAAOxypthRt3aV/s-l300.jpg";
     this.draw = function(){
         var p1 = c.height - noise(t + this.x) * 0.25;
+        var p2 = c.height - noise(t + this.x) * 0.25;
         if(p1 - 15> this.y){
-            this.ySpeed -= 0.1;
+            this.ySpeed += 0.1;
         }else{
             this.y = p1 - 15;
-            this.ySpeed = this.y -(p1-12);
+            this.ySpeed = this.y -(p1-15);
         }
-        this.y -= this.ySpeed;
+        this.y += this.ySpeed;
         ctx.save();
         ctx.translate(this.x, this.y);
         ctx.drawImage(this.img, -15, -15, 30, 30);
