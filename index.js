@@ -36,8 +36,11 @@ var player = new function(){
         }
         var angle = Math.atan2((p2-15) - this.y, (this.x+5) - this.x)
         this.y += this.ySpeed;
+
+        this.rot = angle;
         ctx.save();
         ctx.translate(this.x, this.y);
+        ctx.rotate(this.rot);
         ctx.drawImage(this.img, -15, -15, 30, 30);
         ctx.restore();
     }
