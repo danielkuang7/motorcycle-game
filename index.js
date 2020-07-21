@@ -28,11 +28,14 @@ var player = new function(){
     this.draw = function(){
         var p1 = c.height - noise(t + this.x) * 0.25;
         var p2 = c.height - noise(t+5 + this.x) * 0.25;
+
+        var grounded = 0;
         if(p1 - 15> this.y){
             this.ySpeed += 0.1;
         }else{
             this.y = p1 - 15;
             this.ySpeed = this.y -(p1-15);
+            grounded = 1;
         }
         var angle = Math.atan2((p2-15) - this.y, (this.x+5) - this.x)
         this.y += this.ySpeed;
