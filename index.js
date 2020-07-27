@@ -45,6 +45,7 @@ var player = new function(){
             this.rot -= (this.rot -angle) * 0.5;
             this.rSpeed = this.rSpeed - (angle - this.rot);
         }
+        this.rot -= this.rSpeed * 0.1;
         ctx.save();
         ctx.translate(this.x, this.y);
         ctx.rotate(this.rot);
