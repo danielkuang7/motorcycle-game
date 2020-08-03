@@ -74,7 +74,8 @@ function loop(){
     requestAnimationFrame(loop);
 }
 
-onkeydown = d => k[d.key];
+onkeydown = d => k[d.key]=1;
+onkeyup = d => k[d.key] =0;
 
 
 
