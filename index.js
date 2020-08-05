@@ -55,7 +55,8 @@ var player = new function(){
 }
 
 var t = 0;
-var k = {ArrowUp, ArrowDown, ArrowLeft, ArrowRight};
+var speed = 0;
+var k = {ArrowUp:0, ArrowDown:0, ArrowLeft:0, ArrowRight:0};
 function loop(){
     t += 5;
     ctx.fillStyle = "#19f";
