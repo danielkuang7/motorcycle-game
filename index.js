@@ -45,6 +45,7 @@ var player = new function(){
             this.rot -= (this.rot -angle) * 0.5;
             this.rSpeed = this.rSpeed - (angle - this.rot);
         }
+        this.rSpeed += (k.ArrowLeft - k.ArrowRight) * 0.5;
         this.rot -= this.rSpeed * 0.1;
         ctx.save();
         ctx.translate(this.x, this.y);
@@ -58,7 +59,7 @@ var t = 0;
 var speed = 0;
 var k = {ArrowUp:0, ArrowDown:0, ArrowLeft:0, ArrowRight:0};
 function loop(){ 
-    speed += (speed -(k.ArrowUp - k.ArrowDown)) * 0.01;
+    speed -= (speed -(k.ArrowUp - k.ArrowDown)) * 0.01;
     t += 5 * speed;
     ctx.fillStyle = "#19f";
     ctx.fillRect(0,0,c.width, c.height);
