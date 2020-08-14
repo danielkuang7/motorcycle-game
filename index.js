@@ -38,6 +38,11 @@ var player = new function(){
             this.ySpeed = this.y -(p1-15);
             grounded = 1;
         }
+
+        if(grounded && Math.abs(this.rot) > Math.PI * 0.5){
+
+        }
+
         var angle = Math.atan2((p2-15) - this.y, (this.x+5) - this.x)
         this.y += this.ySpeed;
 
@@ -59,6 +64,7 @@ var player = new function(){
 
 var t = 0;
 var speed = 0;
+var playing = true;
 var k = {ArrowUp:0, ArrowDown:0, ArrowLeft:0, ArrowRight:0};
 function loop(){ 
     speed -= (speed -(k.ArrowUp - k.ArrowDown)) * 0.01;
